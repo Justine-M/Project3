@@ -2,13 +2,11 @@ body {
     font-family: BrandonGrotesqueMedium,Arial,sans-serif
    }
 
-h2 {
-    text-align: center;
-    font-size: 30px;
-    line-height: 2px;
-    font: color #54CBC5;
-    
+.jumbotron {
+    color: black
+
 }
+    
 
 
 
