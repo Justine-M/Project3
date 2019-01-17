@@ -20,6 +20,7 @@ import FooterSection from "./components/footer";
 import ScrollToTop from "./components/scrollToTop";
 import FormPage from "./components/login";
 import TodoApp from "./components/toDo";
+import Guests from "./pages/guests";
 
 
 class App extends React.Component {
@@ -38,6 +39,7 @@ class App extends React.Component {
         <MapSection />
         <FooterSection />
         <ScrollToTop />
+        <Guests/>
         {/* <Route exact path="/Login" component={Login} /> */}
       </div>
     );
