@@ -31,24 +31,56 @@ state = {
         name="lastName"
         placeholder="lastName (required)"
       />
+
+
+Will you be attending?
+<br/>     
+<label>Yes</label>
+<input type="radio" name="Attending" value="yes" />
+
+<label>no</label>
+<input type="radio" name="Attending" value="no" />
+<br />
+
+
+Will you be bringing a guest?
+<br/>   
 <label>Yes</label>
 <input type="radio" name="plusOne" value="yes" />
+
+<label>no</label>
+<input type="radio" name="plusOne" value="no" />
 <br />
-<label>Yes</label>
 
-<input type="radio" name="plusOne" value="No" />
+Please Choose menu options for you and your Guest (if applicable)
+<br />
+<select>
+  <option value="Chicken">Chicken</option>
+  <option value="Fish">Fish</option>
+  <option selected value="Menu">Menu</option>
+  <option value="Vegetarian">Vegetarian</option>
+</select>
 
+<select>
+  <option value="Chicken">Chicken</option>
+  <option value="Fish">Fish</option>
+  <option selected value="Menu">Menu</option>
+  <option value="Vegetarian">Vegetarian</option>
+</select>
 
-<input type="radio" name="Attending" value="yes" />
-<input type="radio" name="Attending" value="No" />      
 
 
       <TextArea
         value={this.state.Memories}
         onChange={this.handleInputChange}
         name="Memories"
-        placeholder="Synopsis (Optional)"
+        placeholder="Are there any special memories or kind words you want to share with the bride and groom?"
       />
+
+      Please attache any images you want to share of the bride and Groom.
+<br/>
+      <input type="file" />
+      
       <FormBtn
         disabled={!(this.state.author && this.state.title)}
         onClick={this.handleFormSubmit}
