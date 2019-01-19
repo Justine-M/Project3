@@ -1,7 +1,6 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import guests from "./pages/guests";
-
 
 function App() {
   return (
@@ -9,11 +8,11 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Guests} />
-          {/* {/* <Route exact path="/guests" component={Guests} />
-          <Route exact path="/guests/:id" component={Detail} />
-          <Route component={NoMatch} /> */}
-        </Switch> */}
+          <Route exact path="/" component={guests} />
+          {/* <Route exact path="/books" component={Books} />
+          <Route exact path="/books/:id" component={Detail} />
+          <Route component={NoMatch} />  */}
+        </Switch>
       </div>
     </Router>
   );
