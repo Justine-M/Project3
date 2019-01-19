@@ -51,9 +51,11 @@ class Form extends Component {
     event.preventDefault();
     if (this.state.firstName && this.state.lastName) {
       API.saveGuest({
-        Name: this.state.firstName,
-        Attending: this.state.attending,
-        Friend: this.state.plusOne
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        plusOne: this.state.plusOne,
+        attending: this.state.attending,
+        
       })
         .then(res => this.loadGuests())
         .catch(err => console.log(err));
