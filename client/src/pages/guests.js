@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/api";
+import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/form";
 import { Col, Row, Container } from "../components/grid";
@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../components/grid";
 
 
 
-class Form extends Component {
+class Guest extends Component {
   state = {
     guests: [],
     firstName: "",
@@ -154,7 +154,7 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Guest;
 
 // const mongoose = require("mongoose");
 // const Schema = mongoose.Schema;

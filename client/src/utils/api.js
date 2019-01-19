@@ -15,5 +15,11 @@ export default {
   }, 
   getEmail:function(){
       return axios.post("/api/login");
-  }
+  },
+  getGuests: function(){
+      return axios.get("/api/guest")
+  },
+ saveGuest: function(guest){
+    return axios.get("/api/guest", guest)
+}
 };
