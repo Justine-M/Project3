@@ -1,5 +1,6 @@
 module.exports = {
     Guest: require("./guest"),
-    Admin: require("./admin")
+    Admin: require("./host"),
+    Users:require("./user")
   };
   

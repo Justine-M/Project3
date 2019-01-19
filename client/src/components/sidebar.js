@@ -8,10 +8,10 @@ class Sidebar extends React.Component {
     };
   }
   render() {
-    const siteNav = [
+    let siteNav = [
       {
-        title: "Home",
-        url: "#top"
+        title: "Login / Register",
+        url: "/login"
       },
       {
         title: "About",
@@ -30,6 +30,8 @@ class Sidebar extends React.Component {
         url: "#contact"
       }
     ];
+    siteNav.push({title: this.props.loggedIn, url: "#user"})
+    console.log(siteNav)
     return [
       <a
         key={"nav-menu-button"}

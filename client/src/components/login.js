@@ -1,8 +1,68 @@
-import React from "react";
+import React, {Component} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
+import API from "../utils/API";
 
-const FormPage = () => {
-  return (
+class FormPage extends Component {
+
+  // class Books  {
+    state = {
+      email: "",
+      password: "",
+      registerMode: false,
+    };
+  
+    componentDidMount(){
+      // this.loadEmail();
+    };
+  
+    // loadEmail = () => {
+    //   API.getEmail()
+    //     .then(res =>
+    //       this.setState({ email: "", password: "" })
+    //     )
+    //     .catch(err => console.log(err));
+    // };
+  
+    // deleteBook = id => {
+    //   API.deleteBook(id)
+    //     .then(res => this.loadBooks())
+    //     .catch(err => console.log(err));
+    // };
+  
+    handleInputChange = event => {
+      const { name, value } = event.target;
+      this.setState({
+        [name]: value
+      });
+    };
+  
+    handleFormSubmit = event => {
+      event.preventDefault();
+      if (this.state.email && this.state.password) {
+
+        if(this.state.registerMode){
+
+          API.registerUser({
+            email: this.state.email,
+            password: this.state.password,
+          })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+
+        }else{
+        
+        API.logInUser({
+          email: this.state.email,
+          password: this.state.password,
+        })
+          .then(res => console.log(res))
+          .catch(err => console.log(err));
+      }
+    }
+  }
+      
+    render() {
+    return (
     <MDBContainer>
       <MDBRow>
         <MDBCol md="12">
@@ -13,17 +73,24 @@ const FormPage = () => {
                   <strong>Sign in</strong>
                 </h3>
               </div>
+
               <MDBInput
+              value={this.state.email}
+              onChange={this.handleInputChange}
                 label="Your email"
                 group
                 type="email"
+                name="email"
                 validate
                 error="wrong"
                 success="right"
               />
               <MDBInput
+              value={this.state.password}
+              onChange={this.handleInputChange}
                 label="Your password"
                 group
+                name="password"
                 type="password"
                 validate
                 containerClass="mb-0"
@@ -41,8 +108,10 @@ const FormPage = () => {
                   gradient="blue"
                   rounded
                   className="btn-block z-depth-1a"
+                  disabled={!(this.state.email && this.state.password)}
+                onClick={this.handleFormSubmit}
                 >
-                  Sign in
+                 {this.state.registerMode ? "Register" : "Sign in"} 
                 </MDBBtn>
               </div>
               <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
@@ -79,7 +148,7 @@ const FormPage = () => {
             <MDBModalFooter className="mx-5 pt-3 mb-1">
               <p className="font-small grey-text d-flex justify-content-end">
                 Not a member?
-                <a href="#!" className="blue-text ml-1">
+                <a href="#!" className="blue-text ml-1" onClick = {() =>{this.setState({registerMode:true})}}>
 
                   Sign Up
                 </a>
@@ -91,5 +160,5 @@ const FormPage = () => {
     </MDBContainer>
   );
 };
-
+}
 export default FormPage;
