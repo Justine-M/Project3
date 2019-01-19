@@ -1,17 +1,18 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import FullApp from "./pages/fullApp";
+import SignUp from "./pages/signUp";
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
-          <Route exact path="/" component={guests} />
-          {/* <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} />  */}
+          <Route exact path="/" component={FullApp} />
+          <Route exact path="/home" component={FullApp} />
+          <Route exact path="/login" component={SignUp} />
         </Switch>
       </div>
     </Router>
