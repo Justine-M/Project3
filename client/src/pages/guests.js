@@ -9,11 +9,11 @@ import { Col, Row, Container } from "../components/grid";
 
 class Form extends Component {
   state = {
-    Guests: [],
-    FirstName: "",
-    LastName: "",
-    Attending: "",
-    PlusOne: ""
+    guests: [],
+    firstName: "",
+    lastName: "",
+    attending: "",
+    plusOne: ""
   };
 
 
@@ -28,7 +28,7 @@ class Form extends Component {
   loadGuests = () => {
     API.getGuests()
       .then(res =>
-        this.setState({ guests: res.data, firstName: "", lastName: "", PlusOne: "", Attending: "" })
+        this.setState({ guests: res.data, firstName: "", lastName: "", plusOne: "", attending: "" })
       )
       .catch(err => console.log(err));
   };
@@ -41,6 +41,7 @@ class Form extends Component {
 
   handleInputChange = event => {
     const { name, value } = event.target;
+    console.log(name, value);
     this.setState({
       [name]: value
     });
@@ -50,9 +51,9 @@ class Form extends Component {
     event.preventDefault();
     if (this.state.firstName && this.state.lastName) {
       API.saveGuest({
-        Name: this.state.FirstName,
-        Attending: this.state.Attending,
-        Friend: this.state.PlusOne
+        Name: this.state.firstName,
+        Attending: this.state.attending,
+        Friend: this.state.plusOne
       })
         .then(res => this.loadGuests())
         .catch(err => console.log(err));
@@ -83,10 +84,10 @@ class Form extends Component {
         Will you be attending?
 <br />
         <label>Yes</label>
-        <input type="radio" name="Attending" value="yes" />
+        <input type="radio" name="attending" value="yes" />
 
         <label>no</label>
-        <input type="radio" name="Attending" value="no" />
+        <input type="radio" name="attending" value="no" />
         <br />
 
 
@@ -129,7 +130,7 @@ class Form extends Component {
         <input type="file" />
 
         <FormBtn
-          disabled={!(this.state.author && this.state.title)}
+          disabled={!(this.state.firstName && this.state.lastName)}
           onClick={this.handleFormSubmit}
         >
           Submit Invite
