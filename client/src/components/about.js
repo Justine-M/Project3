@@ -8,11 +8,10 @@ const AboutSection = () => (
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <h2>
-              Stylish Portfolio is the perfect theme for your next project!
+            The MSJ Experience
             </h2>
             <p className="lead mb-5">
-              This theme features a flexible, UX friendly sidebar menu and stock
-              photos from our friends at
+            No matter what your vison is or where your inspiration comes from, we are dedicated to creating an event that brings it to life!
               <a href="https://unsplash.com/">Unsplash</a>!
             </p>
             <a

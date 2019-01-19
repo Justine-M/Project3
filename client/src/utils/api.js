@@ -17,5 +17,14 @@ export default {
   saveGuest: function(guestData) {
     console.log("GUEST data ", guestData)
     return axios.post("/api/guest", guestData);
+  },
+  getLoggedInUser:function(){
+    return axios.get("api/currentUser")
+  },
+  register:function(user){
+    return axios.get("api/register", user)
+  },
+  logInUser:function(user){
+    return axios.get("api/login", user)
   }
 };
