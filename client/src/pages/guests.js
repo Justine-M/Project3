@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/api";
 // import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/form";
+import { Col, Row, Container } from "../components/grid";
 
 
 

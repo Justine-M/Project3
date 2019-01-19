@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const EventSchema = new Schema({
   eventName: { type: String, required: true },
-  host: { type: Schema.Types.ObjectId, ref: 'Admin' },
+  host: { type: Schema.Types.ObjectId, ref: 'Host' },
   type: {type:String, require: true},
   date: {type:Date}, 
   memories:{type:Boolean},

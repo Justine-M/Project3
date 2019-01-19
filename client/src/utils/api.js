@@ -7,15 +7,15 @@ export default {
       },
       
       getGuests: function(id) {
-        return axios.get("/api/Guests/" + id);
+        return axios.get("/api/guests/" + id);
       },
     
       deleteBook: function(id) {
-        return axios.delete("/api/Guests/" + id);
+        return axios.delete("/api/guests/" + id);
       },
     
-      saveBook: function(guestData) {
-        return axios.post("/api/books", guestData);
+      saveBook: function(guest) {
+        return axios.post("/api/guests", guest);
       }
 
 };
