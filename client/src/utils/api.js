@@ -1,30 +1,36 @@
 import axios from "axios";
 
 export default {
-  // Gets all guests
-  getGuest: function() {
-    return axios.get("/api/guest");
+  logInUser: function(user) { // {email: '', password: ''}
+      return axios.post("/api/login", user)
   },
-  // Gets the guest with the given id
-  getGuests: function(id) {
-    return axios.get("/api/guest/" + id);
+  registerUser: function(user) { // {email: '', password: ''}
+      return axios.post("/api/register", user)
   },
-  // Deletes the guest with the given id
-  deleteGuest: function(id) {
-    return axios.delete("/api/guest/" + id);
+  getLoggedInUser: function(){
+      return axios.get("/api/currentUser")
   },
   // Saves a guest to the database
   saveGuest: function(guestData) {
     console.log("GUEST data ", guestData)
     return axios.post("/api/guest", guestData);
   },
-  getLoggedInUser:function(){
-    return axios.get("api/currentUser")
-  },
-  register:function(user){
-    return axios.get("api/register", user)
-  },
-  logInUser:function(user){
-    return axios.get("api/login", user)
-  }
-};
+  // getLoggedInUser:function(){
+  //   return axios.get("api/currentUser")
+  // },
+  // register:function(user){
+  //   return axios.get("api/register", user)
+  // },
+  // logInUser:function(user){
+  //   return axios.get("api/login", user)
+  // }
+  // savePassword:function(email, password){
+  //     return axios.post("/api/login");
+  // }, 
+  // getEmail:function(){
+  //     return axios.post("/api/login");
+  // },
+  getGuests: function(){
+      return axios.get("/api/guest")
+  }}
+

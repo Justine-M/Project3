@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/api";
+import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/form";
 import { Col, Row, Container } from "../components/grid";
@@ -7,13 +7,14 @@ import { Col, Row, Container } from "../components/grid";
 
 
 
-class Form extends Component {
+class Guest extends Component {
   state = {
     guests: [],
     firstName: "",
     lastName: "",
     attending: "",
-    plusOne: ""
+    plusOne: "",
+    formSubmitted:false
   };
 
 
@@ -57,7 +58,13 @@ class Form extends Component {
         attending: this.state.attending,
         
       })
-        .then(res => this.loadGuests())
+        .then(
+          (res) =>{
+            console.log(res);
+            console.log("hit the return")
+            this.setState({formSubmitted: true})
+          }
+        )
         .catch(err => console.log(err));
     }
   };
@@ -68,6 +75,7 @@ class Form extends Component {
       <Container fluid>
       <Row>
         <Col size="md-6">
+        {!this.state.formSubmitted ? 
       <form>
         <Input
           value={this.state.firstName}
@@ -86,20 +94,20 @@ class Form extends Component {
         Will you be attending?
 <br />
         <label>Yes</label>
-        <input type="radio" name="attending" value="yes" />
+        <input onChange={this.handleInputChange} type="radio" name="attending" value="true" />
 
         <label>no</label>
-        <input type="radio" name="attending" value="no" />
+        <input onChange={this.handleInputChange} type="radio" name="attending" value="false" />
         <br />
 
 
         Will you be bringing a guest?
 <br />
         <label>Yes</label>
-        <input type="radio" name="plusOne" value="yes" />
+        <input onChange={this.handleInputChange} type="radio" name="plusOne" value="true" />
 
         <label>no</label>
-        <input type="radio" name="plusOne" value="no" />
+        <input onChange={this.handleInputChange} type="radio" name="plusOne" value="false" />
         <br />
 
         Please Choose menu options for you and your Guest (if applicable)
@@ -138,6 +146,7 @@ class Form extends Component {
           Submit Invite
       </FormBtn>
       </form>
+      : " Thank you" }
       </Col>
         </Row>
       </Container>
@@ -145,7 +154,7 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Guest;
 
 // const mongoose = require("mongoose");
 // const Schema = mongoose.Schema;
