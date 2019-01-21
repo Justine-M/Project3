@@ -7,18 +7,17 @@ const AboutSection = () => (
       <div className="container text-center">
         <div className="row">
           <div className="col-lg-10 mx-auto">
-            <h2>
-            The MSJ Experience
-            </h2>
+            <h1>
+            <strong>What Makes MSJ Experience Stand Out From The Rest?</strong>
+            </h1>
             <p className="lead mb-5">
-            No matter what your vison is or where your inspiration comes from, we are dedicated to creating an event that brings it to life!
-              <a href="https://unsplash.com/">Unsplash</a>!
+            <strong>Our methods of planning and styling events are simple. We take your vison and make it come alive to ensure we create a seamless and elegant event!</strong>
             </p>
             <a
               className="btn btn-dark btn-xl js-scroll-trigger"
               href="#services"
             >
-              What We Offer
+              <strong>What We Offer</strong>
             </a>
           </div>
         </div>

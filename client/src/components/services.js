@@ -3,27 +3,27 @@ import ScrollableAnchor from "react-scrollable-anchor";
 const ServicesOffered = [
   {
     title: "Weddings",
-    description: "Looks great on any screen size!",
-    icon: "icon-diamond"
+    description: "We design personal and unique experiences that are carefully crafted to reflect a one-of-a-kind love that the couple shares.",
+    icon: "fas fa-heart"
   },
   {
-    title: "Showers",
-    description: "Freshly redesigned for Bootstrap 4.",
-    icon: "icon-umbrella"
+    title: "Baby Showers",
+    description: "Baby showers are a time for families to get together to celebrate the newest member coming into the family.",
+    icon: "fas fa-child"
   },
   {
-    title: "Birthday",
+    title: "Anniversary Parties",
     description: (
       <span>
-        Millions of users <i className="fas fa-heart" /> Start Bootstrap!
+       As you celebrate the commitment of love and marriage, let us help plan your party.  Big or small, we do it all!
       </span>
     ),
-    icon: "icon-birthday-cake"
+    icon: "fas fa-gift"
   },
   {
-    title: "Anniversaries & More",
-    description: "I mustache you a question...",
-    icon: "icon-mustache"
+    title: "Birthday Parties",
+    description: "Whether it's a big celebration or just a small birthday gathering, let us plan your next party.",
+    icon: "fas fa-birthday-cake"
   }
 ];
 const ServicesSections = () => (
@@ -31,8 +31,8 @@ const ServicesSections = () => (
     <section className="content-section bg-primary text-white text-center">
       <div className="container">
         <div className="content-section-heading">
-          <h3 className="text-secondary mb-0">Services</h3>
-          <h2 className="mb-5">What We Offer</h2>
+          <h3 className="text-secondary mb-0"></h3>
+          <h2 className="mb-5">Services We Specialize In</h2>
         </div>
         <div className="row">
           {ServicesOffered.map((service, index) => (

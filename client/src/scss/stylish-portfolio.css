@@ -17,11 +17,13 @@ body {
   padding-bottom: 7.5rem; }
 
 .content-section-heading h2 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  font-weight: bold; }
 
 .content-section-heading h3 {
   font-size: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase; 
+  font-weight: bold;}
 
 h1,
 h2,
@@ -29,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700; }
+  font-weight: bold; }
 
 .text-faded {
   color: rgba(255, 255, 255, 0.7); }
@@ -212,7 +214,7 @@ h6 {
   background-size: cover; }
   .callout h2 {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: bold;
     display: block;
     max-width: 30rem; }
 

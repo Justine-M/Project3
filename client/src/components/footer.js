@@ -1,16 +1,20 @@
 import React from "react";
 const socialSites = [
   {
-    link: "https://twitter.com/cincinnaticodes",
+    link: "https://www.facebook.com/MSJ-Events-235998867278156/?modal=admin_todo_tour",
     icon: "icon-social-facebook"
   },
   {
-    link: "https://twitter.com/cincinnaticodes",
+    link: "https://twitter.com/ExperienceMsj",
     icon: "icon-social-twitter"
   },
   {
-    link: "https://github.com/cincinnaticodes",
-    icon: "icon-social-github"
+    link: "https://www.instagram.com/amor__decor/",
+    icon: "fab fa-instagram"
+  },
+  {
+    link: "mailto:TheMSJExperience@gmail.com",
+    icon: "fab fa-google-plus"
   }
 ];
 const FooterSection = () => (
@@ -25,8 +29,8 @@ const FooterSection = () => (
         </li>
       ))}
       </ul>
-      <p className="text-muted small mb-0">
-        Copyright &copy; Your Website 2018
+      <p className="text-muted small mb-0">2018
+          MSJExperience.com
       </p>
     </div>
   </footer>
