@@ -17,8 +17,7 @@ import CallToAction from "../components/callToAction";
 import MapSection from "../components/map";
 import FooterSection from "../components/footer";
 import ScrollToTop from "../components/scrollToTop";
-import API from "../utils/API";
-
+import API from "../utils/api";
 
 
 class FullApp extends Component {

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
-import API from "../utils/API.js";
+import API from "../utils/api.js";
 
 class FormPage extends Component {
 
