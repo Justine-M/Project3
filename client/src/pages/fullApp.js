@@ -13,7 +13,8 @@ import AboutSection from "../components/about";
 import ServicesSections from "../components/services";
 import CalloutSection from "../components/callout";
 import PortfolioSection from "../components/portfolio";
-import CallToAction from "../components/callToAction";
+import TodoApp from "../components/toDo";
+// import CallToAction from "../components/callToAction";
 import MapSection from "../components/map";
 import FooterSection from "../components/footer";
 import ScrollToTop from "../components/scrollToTop";
@@ -46,7 +47,8 @@ this.setState({user:data.data.email})
         <ServicesSections />
         <CalloutSection />
         <PortfolioSection />
-        <CallToAction />
+        <TodoApp />
+        {/* <CallToAction /> */}
         {/* <FormPage /> */}
         <MapSection />
         <FooterSection />
