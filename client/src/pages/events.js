@@ -73,8 +73,9 @@ class Event extends Component {
   render() {
     return (
       <Container fluid>
+      <div className="container text-center"></div>
       <Row>
-        <Col size="md-6">
+        <Col size="md-12">
         {!this.state.formSubmitted ? 
       <form>
         <Input
@@ -91,36 +92,35 @@ class Event extends Component {
         />
 
 
-        Deposit Made?
-<br />
+<h5 className="mb-4">Deposit Made</h5>
+<ul>
         <label>Yes</label>
-        <input onChange={this.handleInputChange} type="radio" name="attending" value="true" />
+        <input onChange={this.handleInputChange} type="radio" name="type" value="true" /><br />
 
-        <label>no</label>
-        <input onChange={this.handleInputChange} type="radio" name="attending" value="false" />
+        <label>No</label>
+        <input onChange={this.handleInputChange} type="radio" name="type" value="false" />
         <br />
+        </ul>
 
-
-        Deposit Needed?
-<br />
+        <h5 className="mb-4">Date Chosen</h5>
+<ul>
         <label>Yes</label>
-        <input onChange={this.handleInputChange} type="radio" name="plusOne" value="true" />
+        <input onChange={this.handleInputChange} type="radio" name="description" value="true" /><br/>
 
-        <label>no</label>
-        <input onChange={this.handleInputChange} type="radio" name="plusOne" value="false" />
+        <label>No</label>
+        <input onChange={this.handleInputChange} type="radio" name="description" value="false" />
         <br />
+        </ul>
 
-        Notes or requests made by host.
-<br />
-
-
-
+      
+        
         <TextArea
           value={this.state.description}
           onChange={this.handleInputChange}
           name="notes"
-          placeholder="Notes?"
+          placeholder="Notes and Special Requests"
         />
+        
 
        
 <br />
@@ -129,10 +129,10 @@ class Event extends Component {
           disabled={!(this.state.eventName && this.state.host)}
           onClick={this.handleFormSubmit}
         >
-          Submit Event
+          Submit Event Data
       </FormBtn>
       </form>
-      : " Thank you" }
+      : " Event Data Submitted" }
       </Col>
         </Row>
       </Container>
