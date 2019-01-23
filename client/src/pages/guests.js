@@ -36,7 +36,7 @@ class Guest extends Component {
 
   deleteGuest = id => {
     API.deleteGuest(id)
-      .then(res => this.loadBooks())
+      .then(res => this.loadguests())
       .catch(err => console.log(err));
   };
 

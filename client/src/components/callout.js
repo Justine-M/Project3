@@ -10,7 +10,7 @@ const CalloutSection = () => (
         className="btn btn-primary btn-xl"
         href="https://startbootstrap.com/template-overviews/stylish-portfolio/"
       >
-        Download Now!
+        Contact Us!
       </a>
     </div>
   </section>

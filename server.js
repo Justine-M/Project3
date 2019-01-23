@@ -130,6 +130,8 @@ app.use("/api/guest", guestRoutes);
 // event router 
 // app.use("/events", eventRoutes);
 
+app.use("/api/event", eventRoutes);
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

@@ -1,14 +1,21 @@
 .form-control{
-    background: color blue;
+    background: color yellowgreen;
     height: 500px;
 }
 
 
 .btn{
-    color: blue;
+    
+    background: color orange;
 }
 
 .form-group{
-    color: blue;
+    color: black;
     align-content: center;
 }
+
+.background{
+    color: black;
+    border: solid orange;
+};
+

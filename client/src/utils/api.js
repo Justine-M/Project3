@@ -32,5 +32,16 @@ export default {
   // },
   getGuests: function(){
       return axios.get("/api/guest")
-  }}
+  },
+
+  saveEvent: function(eventData) {
+    console.log("EVENT data ", eventData)
+    return axios.post("/api/event", eventData);
+  },
+
+  getEvents: function(){
+    return axios.get("/api/event")
+  }
+
+}
 

@@ -8,7 +8,7 @@ const Header = () => (
       <strong>No matter what your vison is or where your inspiration comes from, we are dedicated to creating an event that brings it to life!</strong>
       </h3>
       <a className="btn btn-primary btn-xl js-scroll-trigger" href="#about">
-      <strong>Find Out More</strong>
+      <strong>Book a consultation</strong>
       </a>
     </div>
     <div className="overlay" />

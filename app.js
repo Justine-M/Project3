@@ -16,6 +16,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 const app = express();
 
 //Configure our app
+// mongoose.Promise = global.Promise;
+// mongoose.connect("mongodb://localhost:27017/Project-3");
 app.use(cors());
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
