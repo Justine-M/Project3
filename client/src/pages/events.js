@@ -73,7 +73,6 @@ class Event extends Component {
   render() {
     return (
       <Container fluid>
-      <div className="container text-center"></div>
       <Row>
         <Col size="md-12">
         {!this.state.formSubmitted ? 

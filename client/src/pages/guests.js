@@ -74,43 +74,46 @@ class Guest extends Component {
     return (
       <Container fluid>
       <Row>
-        <Col size="md-6">
+        <Col size="md-12">
         {!this.state.formSubmitted ? 
       <form>
         <Input
           value={this.state.firstName}
           onChange={this.handleInputChange}
           name="firstName"
-          placeholder="firstName (required)"
+          placeholder="First Name (required)"
         />
         <Input
           value={this.state.lastName}
           onChange={this.handleInputChange}
           name="lastName"
-          placeholder="lastName (required)"
+          placeholder="Last Name (required)"
         />
 
 
-        Will you be attending?
-<br />
-        <label>Yes</label>
-        <input onChange={this.handleInputChange} type="radio" name="attending" value="true" />
 
-        <label>no</label>
+<h5 className="mb-4">Will you be attending?</h5>     
+<ul>
+        <label>Yes</label>
+        <input onChange={this.handleInputChange} type="radio" name="attending" value="true" /><br/>
+
+        <label>No</label>
         <input onChange={this.handleInputChange} type="radio" name="attending" value="false" />
         <br />
+        </ul>
 
 
-        Will you be bringing a guest?
-<br />
+<h5 className="mb-4">Will you be bringing a guest</h5>
+<ul>
         <label>Yes</label>
-        <input onChange={this.handleInputChange} type="radio" name="plusOne" value="true" />
+        <input onChange={this.handleInputChange} type="radio" name="plusOne" value="true" /><br/>
 
         <label>no</label>
         <input onChange={this.handleInputChange} type="radio" name="plusOne" value="false" />
         <br />
+        </ul>
 
-        Please Choose menu options for you and your Guest (if applicable)
+        <h5 className="mb-4">Please Choose menu options for you and your Guest (if applicable)</h5>
 <br />
         <select>
           <option value="Chicken">Chicken</option>
