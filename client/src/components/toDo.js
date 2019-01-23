@@ -47,15 +47,18 @@ class TodoApp extends React.Component {
   
     render() {
       return (
-        <div>
-          <h3>TODO</h3>
+        <section className="content-section bg-primary text-white">
+        <div className="container text-center">
+        <h2 className="mb-4"> <strong>Create A List For The Big Day! Just Click When The Fun Is Done!</strong></h2>
+          <h3 className="mb-4">Checklist</h3>
           <ul>
             {this.state.items.length ? 
                 this.state.items.map(item => (
                     <li onClick={() => this.handleTodo(item.number)} className="toDo" key={item.id}>{item.text}</li>    
                 )) : ''}
         </ul>
-        <h3>DONE</h3>
+        
+        <h3 className="mb-4">Done</h3>
           <ul>
             {this.state.done.length ? 
                 this.state.done.map(item => (
@@ -64,7 +67,7 @@ class TodoApp extends React.Component {
         </ul>
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="new-todo">
-              What needs to be done?
+             
             </label>
             <input
               id="new-todo"
@@ -73,10 +76,11 @@ class TodoApp extends React.Component {
               name="text"
             />
             <button>
-              Add #{this.state.items.length + 1}
+              Add 
             </button>
           </form>
         </div>
+        </section>
       );
     }
 };
