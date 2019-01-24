@@ -6,7 +6,7 @@ const EventSchema = new Schema({
   host: { type: Schema.Types.ObjectId, ref: 'Host' },
   type: {type:String, require: true},
   date: {type:Date}, 
-  memories:{type:Boolean},
+  notes:{type:Boolean},
   description: { type: String, required: true },
   guests: [{ type:Schema.Types.ObjectId, ref: 'Guest'}]
 

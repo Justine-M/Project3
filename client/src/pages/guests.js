@@ -122,6 +122,7 @@ class Guest extends Component {
           <option value="Vegetarian">Vegetarian</option>
         </select>
 
+
         <select>
           <option value="Chicken">Chicken</option>
           <option value="Fish">Fish</option>
@@ -138,7 +139,7 @@ class Guest extends Component {
           placeholder="Are there any special memories or kind words you want to share with the bride and groom?"
         />
 
-        Please attache any images you want to share of the bride and Groom.
+        <h5>Please attach any images you want to share of the bride and Groom.</h5>
 <br />
         <input type="file" />
 
@@ -159,18 +160,3 @@ class Guest extends Component {
 
 export default Guest;
 
-// const mongoose = require("mongoose");
-// const Schema = mongoose.Schema;
-
-// const GuestSchema = new Schema({
-//   firstName: { type: String, required: true },
-//   lastName: { type: String, required: true },
-//   plusOne: { type: boolean, required: true },
-//   memories: {type: String, required: false},
-//   attending: {type: boolean, required:true},
-//   event: { type:Schema.Types.ObjectId, ref: 'Event'}
-// });
-
-// const Guest = mongoose.model("Guest", GuestSchema);
-
-// module.exports = Guest;

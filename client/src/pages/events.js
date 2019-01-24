@@ -7,13 +7,12 @@ import { Col, Row, Container } from "../components/grid";
 
 
 
-class Event extends Component {
+class Eevent extends Component {
   state = {
     eventName: "",
     host: "",
     type: "",
     description: "",
-    // plusOne: "",
     formSubmitted:false
   };
 
@@ -34,9 +33,9 @@ class Event extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteEventt = id => {
+  deleteEvent = id => {
     API.deleteEvent(id)
-      .then(res => this.loadEvents())
+      .then(res => this.loadevents())
       .catch(err => console.log(err));
   };
 
@@ -54,7 +53,7 @@ class Event extends Component {
       API.saveEvent({
         eventName: this.state.eventName,
         host: this.state.host,
-        tpye: this.state.type,
+        type: this.state.type,
         description: this.state.description,
         
       })
@@ -114,7 +113,7 @@ class Event extends Component {
       
         
         <TextArea
-          value={this.state.description}
+          value={this.state.notes}
           onChange={this.handleInputChange}
           name="notes"
           placeholder="Notes and Special Requests"
@@ -139,4 +138,4 @@ class Event extends Component {
   }
 }
 
-export default Event;
+export default Eevent;
