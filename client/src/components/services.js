@@ -31,7 +31,7 @@ const ServicesSections = () => (
     <section className="content-section bg-primary text-white text-center">
       <div className="container">
         <div className="content-section-heading">
-          <h3 className="text-secondary mb-0"></h3>
+          {/* <h3 className="text-secondary mb-0"></h3> */}
           <h2 className="mb-5">Services We Specialize In</h2>
         </div>
         <div className="row">
