@@ -36,10 +36,10 @@ const PortfolioSection = () => (
         <div className="row no-gutters">
           {portfolioItems.map((project, index) => (
             <div className="col-lg-6" key={`portfolio_item_${index}`}>
-              <a className="portfolio-item" href="">
+              <a className="portfolio-item">
                 <span className="caption">
                   <span className="caption-content">
-                   <h1><strong>{project.heading}</strong></h1>
+                    <h2><strong>{project.heading}</strong></h2>
                     <p className="mb-0">{project.description}</p>
                   </span>
                 </span>

@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const app = express();
 const guestRoutes = require("./routes/api/guest");
 const eventRoutes = require('./routes/api/event');
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 
 
 
