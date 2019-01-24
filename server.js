@@ -6,11 +6,34 @@ const mongoose = require("mongoose");
 const app = express();
 const guestRoutes = require("./routes/api/guest");
 const eventRoutes = require('./routes/api/event');
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 
 
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'youremail@gmail.com',
+//     pass: 'yourpassword'
+//   }
+// });
 
-//nodemailer stuff to send emails to guests
+// var mailOptions = {
+//   from: 'TheMSJExperience@gmail.com',
+//   to: 'shardayel17@yahoo.com',
+//   subject: 'Sending Email using Node.js',
+//   text: 'That was easy!'
+// };
+
+// transporter.sendMail(mailOptions, function(error, info){
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Email sent: ' + info.response);
+//   }
+// }); 
+
+
+// // nodemailer stuff to send emails to guests
 // const transporter = nodemailer.createTransport({
 //   service: gmail,
 //   auth: {

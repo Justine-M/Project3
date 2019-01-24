@@ -1,7 +1,10 @@
 import React from "react";
 import "./formstyle.css";
+import guestjumbotron from"./guestjumbotron";
 
 // This file exports the Input, TextArea, and FormBtn components
+
+
 
 export function Input(props) {
   return (

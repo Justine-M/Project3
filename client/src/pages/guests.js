@@ -3,7 +3,7 @@ import API from "../utils/api";
 // import { Link } from "react-router-dom";
 import { Input, TextArea, FormBtn } from "../components/form";
 import { Col, Row, Container } from "../components/grid";
-
+import guestjumbotron from"../components/guestjumbotron";
 
 
 
@@ -74,7 +74,12 @@ class Guest extends Component {
     return (
       <Container fluid>
       <Row>
-        <Col size="md-12">
+        <Col size="md-10">
+        <div className="gtron">
+        <guestjumbotron>
+              {/* <h2><strong>Accept or decline this invitation by completing form</strong></h2><br/> */}
+            </guestjumbotron>
+            </div>
         {!this.state.formSubmitted ? 
       <form>
         <Input
