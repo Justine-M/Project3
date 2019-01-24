@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const app = express();
 const guestRoutes = require("./routes/api/guest");
 const eventRoutes = require('./routes/api/event');
+const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 
@@ -19,9 +20,24 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
   from: 'TheMSJExperience@gmail.com',
-  to: 'shardayel17@yahoo.com',
+  to: 'shardayel17@yahoo.co',
   subject: 'You have been invited to attend a weedding for:',
-  text: 'Stacy and Mike'
+  text: `Martin and Gina
+                Invite you to join them in the celebration of their marriage.
+                When: Saturday, July 9th 2019 at 2:30 in the Afternoon.
+                Where: The Philadelphia Museum of art.
+                Dinner and dancing to follow.
+                
+                Please follow link below to accept or decline invitation:
+                             http://localhost:3000/guest`
+                
+  // html: <h1>Invite you to join them in the celebration of their marriage.</h1>
+  // <p>When: Saturday, July 9th 2019 at 2:30 in the Afternoon.</p>
+  // <p>Where: The Philadelphia Museum of art.</p>
+  // <p>Dinner and dancing to follow.</p>
+
+
+
 
 };
 

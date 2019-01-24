@@ -155,7 +155,7 @@ class Guest extends Component {
           Submit Invite
       </FormBtn>
       </form>
-      : " Thank you" }
+      : " Thank you, your preferences have been documented" }
       </Col>
         </Row>
       </Container>
