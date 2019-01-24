@@ -19,7 +19,7 @@ import MapSection from "../components/map";
 import FooterSection from "../components/footer";
 import ScrollToTop from "../components/scrollToTop";
 import API from "../utils/api";
-import Eventform from "../components/eventform";
+// import Eventform from "../components/eventform";
 
 
 
